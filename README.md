@@ -35,19 +35,21 @@ The World Wide Web Consortium (W3C) is founded by Tim Berners-Lee at the Massach
 Cascading Style Sheets (CSS) was created by Håkon Wium Lie and Bert Bos. CSS is a style sheet language used for describing the presentation of a document written in HTML or XML. It allows web developers to separate content from design, making it easier to maintain and update web pages.
 
 
-## 1998
+## 1998 - Microsofts take on Web Components
 
-Microsoft creates HTML Components (HTC) to extend the DOM with new attributes. It relies on JScript and VBScript and Microsoft ActiveX is required. In 2011, this is discontinued and deprecated on IE10.
+Microsoft creates HTML Components (HTC) to extend the DOM with new attributes. It relies on JScript and VBScript and Microsoft ActiveX is required. In 2011, this is discontinued and deprecated on IE10 (2012)
 
-## 2001
+## 2001 - Mozillas take on Web Components
 
-Mozilla introduces XML Binding Language (XBL). The idea is to extend default tags with custom behaviour. XBL2 comes out in 2007. While the intention is good, implementations are not. This is eventually abandoned in 2012.
+Mozilla introduces XML Binding Language (XBL). The idea is to extend default tags with custom behaviour. XBL2 comes out in 2007. While the intention is good, implementations are not. This is eventually abandoned in 2012
 
 # Standards
 
 ## 2004
 
-The WHATWG is founded in 2004 by Apple, Mozilla, and Opera. It is a community of people interested in evolving HTML and related technologies. The WHATWG is not a standards body, but it does have a significant influence on the development of web standards.
+[The WHATWG]([text](https://en.wikipedia.org/wiki/WHATWG)) is founded in 2004 by Apple, Mozilla, and Opera. It is a community of people interested in evolving HTML and related technologies. The WHATWG is not a standards body, but it does have a significant influence on the development of web standards.
+
+ In **2019**, the W3C and WHATWG agreed to a memorandum of understanding where development of HTML and DOM specifications would be done principally in the WHATWG.
 
 ## 2010
 
@@ -55,12 +57,12 @@ From the failure of vendor-oriented approaches, comes the idea of frameworks or 
 
 # A new era - Frameworks and Web Components
 
-## 2011
+## 2011 - Googles take on Web Components
 
-At the Fronteers 2011 conference, Alex Russell gives a talk titled "Web Components and Model Driven Views". He explains how JS frameworks are trying to do what HTML is supposed to do. He then outlines scoped CSS, custom elements and Web Components.
+At the Fronteers 2011 conference in Amsterdam, Alex Russell gives a talk titled "Web Components and Model Driven Views". He explains how JS frameworks are trying to do what HTML is supposed to do. He then outlines scoped CSS, custom elements and Web Components.
 
 - Alex Russell - Fronteer Amsterdam Conference **2011**
-  - [video](https://vimeo.com/33430613)
+  - [video presentation](https://vimeo.com/33430613)
   - [Slides](https://infrequently.org/11/fronteers/fronteers.html#36)
 - - [Alex Russel - Performance.now() conference 2024](https://www.youtube.com/watch?v=0XwWVjQOmyg)
 
@@ -68,32 +70,40 @@ At the Fronteers 2011 conference, Alex Russell gives a talk titled "Web Componen
 
 W3C publishes a working draft titled ["Introduction to Web Components"](https://www.w3.org/TR/components-intro/).
 
-## 2014
+## 2014 - the first browsers start supporting Web Components
 
-Google Chrome and Opera browsers start supporting v0 of Web Components. In 2016, the same browsers start supporting v1 of Web Components.
+Google Chrome and Opera browsers start supporting **V0** of Web Components.  
 
-## 2016
+## 2016 - Web Components V0 replaced by V1
 
-Google joins the WHATWG.
+Google Chrome and Opera In 2016 replace **V0** with **V1** of Web Components.
 
-## March 2017
+* ``document.registerElements`` is replaced with ``customElements.define``
+* ``createShadowRoot`` is replaced with ``attachShadow``
+* shadowDOM selectors ``::shadow``, ``/deep/`` and ``::content`` are removed, and years later replaced with ``::part`` and ``::theme``
+* ``<content>`` is replaced with ``<slot>`` 
+* In **V0** MutationObservers are required to detect lightDOM changes. In **V1**, this is done automatically.
+
+## 2016 - Google joins the WHATWG.
+
+## March 2017 - Safari supports Web Components
 
 Safari 10.1 now supports _Autonomous Custom Elements_ (`extends HTMLElement`).  
 But make it clear they will not implement _Customized Built-In Elements_ (extend any existing Element), citing the [Liskov princliple](https://en.wikipedia.org/wiki/Liskov_substitution_principle).
 
-## December 2017
+## December 2017 - Microsoft joins the WHATWG
 
-Microsoft joins the WHATWG
+The one major Web brand missing is Meta/Facebook. But since the WHATWG is "By invitation only" membership is not expected.
 
 ## 2018
 
-Safari, Firefox, Chrome and Opera now support Web Components V1.
+Safari, Firefox, Chrome and Opera now support Web Components **V1**.
 Microsoft Browsers Internet Explorer and Edge require a polyfill.
 
-## May 2019
+## May 2019 - the WHATWG gets the lead
 
 The **World Wide Web Consortium (W3C)** did not entirely relinquish its role but, on **May 28, 2019**, it formalized a collaboration with the **Web Hypertext Application Technology Working Group (WHATWG)** to streamline the development of HTML and DOM specifications.  
-This agreement aimed to eliminate the confusion arising from having ##  separate standards by designating WHATWG's "Living Standard" as the authoritative specification for HTML and DOM. Consequently, W3C ceased publishing its own standalone versions of these specifications and instead focused on contributing to and endorsing the WHATWG's ongoing work.
+This agreement aimed to eliminate the confusion arising from having two separate standards by designating WHATWG's _"Living Standard"_ as the authoritative specification for HTML and DOM. Consequently, W3C ceased publishing its own standalone versions of these specifications and instead focused on contributing to and endorsing the WHATWG's ongoing work.
 
 # Web Components in evergreen browsers
 
